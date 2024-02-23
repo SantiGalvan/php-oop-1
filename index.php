@@ -6,7 +6,7 @@ class Movie {
     public $duration;
     public $original_language;
 
-    public function __construct($title, $year_of_publication, $genre, $duration, $original_languag) {
+    public function __construct($title, $year_of_publication, $genre, $duration, $original_language) {
         $this->title = $title;
         $this->year_of_publication = $year_of_publication;
         $this->genre = $genre;
@@ -16,4 +16,6 @@ class Movie {
 }
 
 $movie = new Movie('Toy Storu', 1995, ['animazione', 'commedia'], 81, 'EN');
+
+var_dump($movie);
 ?>
