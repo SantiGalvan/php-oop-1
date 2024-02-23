@@ -3,19 +3,33 @@ class Movie {
     public $title;
     public $year_of_publication;
     public $genre;
-    public $duration;
     public $original_language;
+    public $duration;
+    public $hour;
+    public $minutes;
 
-    public function __construct($title, $year_of_publication, $genre, $duration, $original_language) {
+    public function __construct($title, $year_of_publication, $genre, $original_language, $duration) {
         $this->title = $title;
         $this->year_of_publication = $year_of_publication;
         $this->genre = $genre;
-        $this->duration = $duration;
         $this->original_language = $original_language;
+        $this->duration = $duration;
+        $this->setDuration();
+    }
+
+    public function setDuration() {
+        $this->hour = floor($this->duration / 60);
+        $this->minutes =  $this->duration % 60;
+    }
+
+    public function getDuration() {
+        echo "{$this->hour}:{$this->minutes}";
     }
 }
 
-$movie = new Movie('Toy Storu', 1995, ['animazione', 'commedia'], 81, 'EN');
+$movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81);
 
 var_dump($movie);
+
+$movie->getDuration();
 ?>
