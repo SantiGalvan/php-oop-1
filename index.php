@@ -32,4 +32,11 @@ $movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81);
 var_dump($movie);
 
 $movie->getDuration();
+
+$second_movie = new Movie('Into the Wild', 2007, ['avventura', 'biografico', 'drammatico'], 'EN', 148);
+
+var_dump($second_movie);
+
+$second_movie->getDuration();
+
 ?>
