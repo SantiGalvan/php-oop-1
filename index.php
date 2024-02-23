@@ -14,4 +14,7 @@ class Movie {
         $this->$original_language = $original_language;
     }
 }
+
+$movie = new Movie('Toy Storu', 1995, ['animazione', 'commedia'], 81, 'EN');
+
 ?>
