@@ -7,13 +7,15 @@ class Movie {
     public $duration;
     public $hour;
     public $minutes;
+    public $director;
 
-    public function __construct($title, $year_of_publication, $genre, $original_language, $duration) {
+    public function __construct($title, $year_of_publication, $genre, $original_language, $duration, Director $director) {
         $this->title = $title;
         $this->year_of_publication = $year_of_publication;
         $this->genre = $genre;
         $this->original_language = $original_language;
         $this->duration = $duration;
+        $this->director = $director;
         $this->setDuration();
     }
 
@@ -42,14 +44,14 @@ class Director {
     }
 }
 
-$movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81);
 $director_movie = new Director('John', 'Lasseter', 67, 'USA');
+$movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81, $director_movie);
 
 var_dump($movie);
 var_dump($director_movie);
 
-$second_movie = new Movie('Into the Wild', 2007, ['avventura', 'biografico', 'drammatico'], 'EN', 148);
 $director_second_movie = new Director('Sean', 'Penn', 64, 'USA');
+$second_movie = new Movie('Into the Wild', 2007, ['avventura', 'biografico', 'drammatico'], 'EN', 148, $director_second_movie);
 
 var_dump($second_movie);
 var_dump($director_second_movie);
