@@ -27,6 +27,14 @@ class Movie {
     }
 }
 
+
+class Director {
+    public $name;
+    public $last_name;
+    public $age;
+    public $nationality;
+}
+
 $movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81);
 
 var_dump($movie);
