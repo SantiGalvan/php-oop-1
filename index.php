@@ -44,6 +44,13 @@ class Director {
     }
 }
 
+class Actor {
+    public $name;
+    public $last_name;
+    public $age;
+    public $nationality;
+}
+
 $director_movie = new Director('John', 'Lasseter', 67, 'USA');
 $movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81, $director_movie);
 
