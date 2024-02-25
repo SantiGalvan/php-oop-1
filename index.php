@@ -33,6 +33,13 @@ class Director {
     public $last_name;
     public $age;
     public $nationality;
+
+    public function __construct($name, $last_name, $age, $nationality) {
+       $this->name = $name; 
+       $this->last_name = $last_name;
+       $this->age = $age; 
+       $this->nationality = $nationality; 
+    }
 }
 
 $movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81);
