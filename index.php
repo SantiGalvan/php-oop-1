@@ -43,15 +43,15 @@ class Director {
 }
 
 $movie = new Movie('Toy Story', 1995, ['animazione', 'commedia'], 'EN', 81);
+$director_movie = new Director('John', 'Lasseter', 67, 'USA');
 
 var_dump($movie);
-
-$movie->getDuration();
+var_dump($director_movie);
 
 $second_movie = new Movie('Into the Wild', 2007, ['avventura', 'biografico', 'drammatico'], 'EN', 148);
+$director_second_movie = new Director('Sean', 'Penn', 64, 'USA');
 
 var_dump($second_movie);
-
-$second_movie->getDuration();
+var_dump($director_second_movie);
 
 ?>
